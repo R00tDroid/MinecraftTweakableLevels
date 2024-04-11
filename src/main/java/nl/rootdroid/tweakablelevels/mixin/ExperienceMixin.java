@@ -14,6 +14,7 @@ public class ExperienceMixin {
     private void getNextLevelExperience(CallbackInfoReturnable<Integer> returnable) {
         PlayerEntity playerEntity = (PlayerEntity)(Object)this;
         ModConfig config = TweakableLevels.getConfig();
-        returnable.setReturnValue(config.requiredBaseExperience + playerEntity.experienceLevel * config.requiredExperiencePerLevel);
+        int experience = config.getRequiredExperience(playerEntity.experienceLevel);
+        returnable.setReturnValue(experience);
     }
 }
