@@ -1,23 +1,10 @@
 package nl.rootdroid.tweakablelevels;
 
-import me.shedaniel.autoconfig.AutoConfig;
 import me.shedaniel.autoconfig.ConfigData;
 import me.shedaniel.autoconfig.annotation.Config;
-import me.shedaniel.autoconfig.annotation.ConfigEntry;
 
 @Config(name = "TweakableLevels")
-class ModConfig implements ConfigData {
-    boolean toggleA = true;
-    boolean toggleB = false;
-
-    @ConfigEntry.Gui.CollapsibleObject
-    InnerStuff stuff = new InnerStuff();
-
-    @ConfigEntry.Gui.Excluded
-    InnerStuff invisibleStuff = new InnerStuff();
-
-    static class InnerStuff {
-        int a = 0;
-        int b = 1;
-    }
+public class ModConfig implements ConfigData {
+    public int baseExperience = 7;
+    public int experiencePerLevel = 0;
 }
