@@ -8,7 +8,7 @@ import me.shedaniel.autoconfig.AutoConfig;
 import me.shedaniel.autoconfig.serializer.GsonConfigSerializer;
 
 public class TweakableLevels implements ModInitializer {
-    private static final Logger logger = LoggerFactory.getLogger("tweakable-levels");
+    private static final Logger logger = LoggerFactory.getLogger("TweakableLevels");
     private static ModConfig config;
 
     @Override
