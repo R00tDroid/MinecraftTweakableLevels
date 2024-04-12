@@ -6,17 +6,18 @@ import org.slf4j.Logger;
 
 @Config(name = "TweakableLevels")
 public class ModConfig implements ConfigData {
-    int requiredBaseExperience = 6;
-    float requiredExperiencePerLevel = 0.2f;
+    float requiredExperienceBase = 5.0f;
+    float requiredExperienceLinear = 1.0f;
+    float requiredExperienceExponential = 0.087f;
 
     public int getRequiredExperience(int level){
-        return requiredBaseExperience + (int)(level * requiredExperiencePerLevel);
+        double experience = requiredExperienceBase + level * requiredExperienceLinear + Math.pow(level, 2) * requiredExperienceExponential;
+        return (int)experience;
     }
 
     public void logConfig(){
         Logger logger = TweakableLevels.getLogger();
-        logger.info("Base experience: {}", requiredBaseExperience);
-        logger.info("Experience per level: {}", requiredExperiencePerLevel);
+        logger.info("Experience config: base {}, linear {}, exponential {}", requiredExperienceBase, requiredExperienceLinear, requiredExperienceExponential);
         logger.info("Required for level 1: {}", getRequiredExperience(1));
         logger.info("Required for level 15: {}", getRequiredExperience(15));
         logger.info("Required for level 30: {}", getRequiredExperience(30));
