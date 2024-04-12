@@ -12,9 +12,13 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 public class ExperienceMixin {
     @Inject(at = @At("HEAD"), method = "getNextLevelExperience", cancellable = true)
     private void getNextLevelExperience(CallbackInfoReturnable<Integer> returnable) {
-        PlayerEntity playerEntity = (PlayerEntity)(Object)this;
+        PlayerEntity playerEntity = getInstance();
         ModConfig config = TweakableLevels.getConfig();
         int experience = config.getRequiredExperience(playerEntity.experienceLevel);
         returnable.setReturnValue(experience);
+    }
+
+    private PlayerEntity getInstance(){
+        return (PlayerEntity)(Object)this;
     }
 }
