@@ -23,13 +23,13 @@ jobs:
           distribution: 'microsoft'
 
       - name: Generate project
-        run: mkdir project && ls && cd project && ls && cmake ./.. -DMinecraftVersion=${{ matrix.game }}
+        run: ls && cmake --version && cmake ./ -DMinecraftVersion=${{ matrix.game }}
       - name: Gradle permissions
         run: chmod +x ./gradlew
       - name: Gradle build
         run: ./gradlew build
       - name: Upload artifatcs
-        if: ${{ matrix.java == '21' }}
+        if: ${{ matrix.java == '21' }} 
         uses: actions/upload-artifact@v4
         with:
           name: Artifacts-${{ matrix.game }}
