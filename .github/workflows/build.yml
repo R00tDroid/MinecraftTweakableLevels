@@ -23,7 +23,7 @@ jobs:
           distribution: 'microsoft'
 
       - name: Generate project
-        run: ls && cmake .. -DMinecraftVersion=${{ matrix.game }}
+        run: md project && cd project && cmake .. -DMinecraftVersion=${{ matrix.game }}
       - name: Gradle permissions
         run: chmod +x ./gradlew
       - name: Gradle build
