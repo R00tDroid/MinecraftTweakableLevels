@@ -12,4 +12,4 @@ set(ModVersion "${PROJECT_VERSION_MAJOR}.${PROJECT_VERSION_MINOR}.${PROJECT_VERS
 message("ModVersion: ${ModVersion}")
 
 configure_file("${CMAKE_CURRENT_LIST_DIR}/gradle.properties.in" "${CMAKE_CURRENT_LIST_DIR}/gradle.properties" @ONLY)
-configure_file("${CMAKE_CURRENT_LIST_DIR}//src/main/resources/fabric.mod.json.in" "${CMAKE_CURRENT_LIST_DIR}/src/main/resources/fabric.mod.json" @ONLY)
+configure_file("${CMAKE_CURRENT_LIST_DIR}/src/main/resources/fabric.mod.json.in" "${CMAKE_CURRENT_LIST_DIR}/src/main/resources/fabric.mod.json" @ONLY)
