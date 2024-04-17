@@ -39,3 +39,5 @@ replay_*.log
 *.hprof
 *.jfr
 /project
+/gradle.properties
+/src/main/resources/fabric.mod.json
