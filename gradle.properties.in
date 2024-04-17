@@ -9,4 +9,4 @@ mod_version=@ModVersion@
 maven_group=nl.rootdroid.tweakablelevels
 archives_base_name=tweakable-levels
 
-fabric_version=@Fabric@+@MinecraftVersion@
+fabric_version=@Yarn@

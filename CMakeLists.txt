@@ -4,8 +4,9 @@ project(TweakableLevels VERSION 1.0.1)
 
 message("MinecraftVersion: ${MinecraftVersion}")
 include("${CMAKE_CURRENT_LIST_DIR}/Versions/${MinecraftVersion}.txt")
-message("Fabric: ${Fabric}")
-message("FabricLoader: ${FabricLoader}")
+message("Fabric: ${Fabric}") # https://maven.fabricmc.net/net/fabricmc/fabric-api/fabric-api
+message("FabricLoader: ${FabricLoader}") # https://maven.fabricmc.net/net/fabricmc/fabric-loader
+message("Yarn: ${Yarn}") # https://maven.fabricmc.net/net/fabricmc/yarn
 
 set(ModVersion "${PROJECT_VERSION_MAJOR}.${PROJECT_VERSION_MINOR}.${PROJECT_VERSION_PATCH}")
 message("ModVersion: ${ModVersion}")
