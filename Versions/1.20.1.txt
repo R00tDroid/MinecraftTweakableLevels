@@ -1,0 +1,2 @@
+set(FabricLoader 0.14.21)
+set(Fabric 0.83.0)
