@@ -1,0 +1,12 @@
+org.gradle.jvmargs=-Xmx1G
+org.gradle.parallel=true
+
+minecraft_version=@MinecraftVersion@
+yarn_mappings=@Yarn@
+loader_version=@FabricLoader@
+
+mod_version=@ModVersion@
+maven_group=nl.rootdroid.tweakablelevels
+archives_base_name=tweakable-levels
+
+fabric_version=@Fabric@+@MinecraftVersion@

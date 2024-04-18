@@ -1,7 +1,7 @@
 {
     "schemaVersion": 1,
     "id": "tweakable-levels",
-    "version": "${version}",
+    "version": "@ModVersion@",
     "name": "Tweakable Levels",
     "description": "Get full control over the required experience per level.",
     "authors": [
@@ -23,8 +23,8 @@
         "tweakable-levels.mixins.json"
     ],
     "depends": {
-        "fabricloader": ">=0.14.21",
-        "minecraft": "~1.20.1",
+        "fabricloader": ">=@FabricLoader@",
+        "minecraft": "~@MinecraftVersion@",
         "java": ">=17",
         "fabric-api": "*"
     },
