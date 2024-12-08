@@ -29,7 +29,7 @@ jobs:
       - name: Gradle permissions
         run: chmod +x ./gradlew
       - name: Gradle build
-        run: ./gradlew ${{ matrix.framework }} build
+        run: ./gradlew :${{ matrix.framework }}:build
       - name: Upload artifatcs
         if: ${{ matrix.java == '21' }} 
         uses: actions/upload-artifact@v4
