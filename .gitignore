@@ -3,3 +3,5 @@
 build
 run
 .idea
+gradle.properties
+fabric/src/main/resources/fabric.mod.json
