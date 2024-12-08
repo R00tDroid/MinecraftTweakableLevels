@@ -23,7 +23,7 @@ jobs:
         with:
           java-version: ${{ matrix.java }}
           distribution: 'microsoft'
-          
+
       - name: Generate project
         run: cmake ./ -DMinecraftVersion=${{ matrix.game }}
       - name: Gradle permissions
@@ -34,5 +34,5 @@ jobs:
         if: ${{ matrix.java == '21' }} 
         uses: actions/upload-artifact@v4
         with:
-          name: Artifacts-${{ matrix.game }}
+          name: ${{ matrix.framework }}-${{ matrix.game }}
           path: build/libs/
