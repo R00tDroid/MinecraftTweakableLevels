@@ -8,7 +8,7 @@ jobs:
   build:
     strategy:
       matrix:
-        framework: [Fabric, Forge]
+        framework: [fabric, forge]
         java: [17, 21]
         game: [1.20.1, 1.20.2, 1.20.3, 1.20.4]
       fail-fast: false
@@ -23,15 +23,13 @@ jobs:
         with:
           java-version: ${{ matrix.java }}
           distribution: 'microsoft'
-
-      - name: Select framework
-        run: cd ${{ matrix.framework }}
+          
       - name: Generate project
         run: cmake ./ -DMinecraftVersion=${{ matrix.game }}
       - name: Gradle permissions
         run: chmod +x ./gradlew
       - name: Gradle build
-        run: ./gradlew build
+        run: ./gradlew ${{ matrix.framework }} build
       - name: Upload artifatcs
         if: ${{ matrix.java == '21' }} 
         uses: actions/upload-artifact@v4
