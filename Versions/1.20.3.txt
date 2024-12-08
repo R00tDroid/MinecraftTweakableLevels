@@ -1,3 +1,4 @@
 set(FabricLoader 0.14.21)
 set(Fabric 0.89.4)
+set(Forge 49.0.2)
 set(Yarn 1.20.3+build.1)
