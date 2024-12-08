@@ -35,4 +35,4 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: ${{ matrix.framework }}-${{ matrix.game }}
-          path: build/libs/
+          path: ${{ matrix.framework }}/build/libs/
